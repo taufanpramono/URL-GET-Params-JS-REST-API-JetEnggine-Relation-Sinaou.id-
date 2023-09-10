@@ -54,7 +54,7 @@ add_shortcode('nama_guru','dapetin_nilai_nama_guru'); // cara panggil di acf
 
 
 function dapetin_nama_kursus() {
-    $namakursus = get_field('pelajaran_yang_di_ampuh'); //cara panggil di acf
+    $namakursus = get_field('nama-materi-kursus'); //cara panggil di acf
     return $namakursus;
 }
 add_shortcode('nama_kursus','dapetin_nama_kursus');
