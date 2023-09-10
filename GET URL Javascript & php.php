@@ -82,6 +82,13 @@ function dapetin_nama_kursus() {
 add_shortcode('nama_kursus','dapetin_nama_kursus');
 
 
+//cara pemanggilan metafiled crocoblock dapat dilakukan dengan 2 cara 
+// 1. plain WP API  
+get_post_meta( get_the_ID(), 'field_key', true );
+// 2. with JetEngine API 
+jet_engine()->listings->data->get_meta( 'field_key' );
+
+
 
 
  ?>
