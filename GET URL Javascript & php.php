@@ -41,11 +41,11 @@ function dapetin_nilai_nama_guru() {
     $namaguru = get_field('nama_guru');
     return $namaguru;
 }
-add_shortcode('nama_guru','dapetin_nilai_nama_guru');
+add_shortcode('nama_guru','dapetin_nilai_nama_guru'); // cara panggil di acf
 
 
 function dapetin_nama_kursus() {
-    $namakursus = get_field('pelajaran_yang_di_ampuh');
+    $namakursus = get_field('pelajaran_yang_di_ampuh'); //cara panggil di acf
     return $namakursus;
 }
 add_shortcode('nama_kursus','dapetin_nama_kursus');
@@ -56,14 +56,14 @@ add_shortcode('nama_kursus','dapetin_nama_kursus');
 //======================
 
 function dapetin_nilai_nama_guru() {
-    $namaguru = get_post_meta( get_the_ID(), 'nama-guru', true ); //perbedaan pemanggilan ada disini,  
+    $namaguru = get_post_meta( get_the_ID(), 'nama-guru', true ); //cara panggil jet enggine metafield
     return $namaguru;
 }
 add_shortcode('nama_guru','dapetin_nilai_nama_guru');
 
 
 function dapetin_nama_kursus() {
-    $namakursus = get_post_meta( get_the_ID(), 'nama-materi-kursus', true ); //perbedaan pemanggilan ada disini, 
+    $namakursus = get_post_meta( get_the_ID(), 'nama-materi-kursus', true ); //cara panggil jet enggine metafield
     return $namakursus;
 }
 add_shortcode('nama_kursus','dapetin_nama_kursus');
