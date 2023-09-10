@@ -1,3 +1,7 @@
+<!-- ========================================== -->
+<!-- cara mengirim value dari URL GET Parameter ke form field id -->
+<!-- ========================================== -->
+
 <script type="text/javascript">
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -34,7 +38,15 @@ else {
 </script>
 
 
+
+
+
+
 <?php 
+
+//======================
+//menggunakan ACF Field, cara panggil nilai dari custom field  kodenya & caranya seperti dibawah
+//======================
 
 
 function dapetin_nilai_nama_guru() {
