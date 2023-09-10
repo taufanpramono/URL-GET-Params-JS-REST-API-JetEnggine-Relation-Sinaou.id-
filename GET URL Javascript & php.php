@@ -39,9 +39,6 @@ else {
 
 
 
-
-
-
 <?php 
 
 //======================
@@ -63,8 +60,12 @@ function dapetin_nama_kursus() {
 add_shortcode('nama_kursus','dapetin_nama_kursus');
 
 
+
+
+
+
 //======================
-//menggunakan crocoblock, cara panggil nilai dari meta field  kodenya & caranya seperti dibawah
+//menggunakan (crocoblock) jet enggine metabox / meta field, cara panggil nilai dari meta field kodenya & caranya seperti dibawah
 //======================
 
 function dapetin_nilai_nama_guru() {
