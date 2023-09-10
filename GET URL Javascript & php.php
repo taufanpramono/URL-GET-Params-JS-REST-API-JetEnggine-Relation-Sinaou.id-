@@ -51,6 +51,28 @@ function dapetin_nama_kursus() {
 add_shortcode('nama_kursus','dapetin_nama_kursus');
 
 
+//======================
+//menggunakan crocoblock, cara panggil nilai dari meta field  kodenya & caranya seperti dibawah
+//======================
+
+function dapetin_nilai_nama_guru() {
+    $namaguru = get_post_meta( get_the_ID(), 'nama-guru', true ); //perbedaan pemanggilan ada disini,  
+    return $namaguru;
+}
+add_shortcode('nama_guru','dapetin_nilai_nama_guru');
+
+
+function dapetin_nama_kursus() {
+    $namakursus = get_post_meta( get_the_ID(), 'nama-materi-kursus', true ); //perbedaan pemanggilan ada disini, 
+    return $namakursus;
+}
+add_shortcode('nama_kursus','dapetin_nama_kursus');
+
+
+
 
  ?>
+
+
+
 
