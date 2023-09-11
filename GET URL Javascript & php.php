@@ -41,9 +41,10 @@ else {
 
 <?php 
 
-//======================
-//menggunakan ACF Field, cara panggil nilai dari custom field  kodenya & caranya seperti dibawah
-//======================
+//============================================
+// menggunakan ACF Field, 
+// Update : 11/09/2023
+//============================================
 
 
 function dapetin_nilai_nama_guru() {
@@ -63,10 +64,10 @@ add_shortcode('nama_kursus','dapetin_nama_kursus');
 
 
 
-
-//======================
-//menggunakan (crocoblock) jet enggine metabox / meta field, cara panggil nilai dari meta field kodenya & caranya seperti dibawah
-//======================
+//=============================================================
+// menggunakan (crocoblock) jet enggine metabox / meta field, 
+// Update : 11/09/2023
+//=============================================================
 
 function dapetin_nilai_nama_guru() {
     $namaguru = get_post_meta( get_the_ID(), 'nama-guru', true ); //cara panggil jet enggine metafield
@@ -90,15 +91,26 @@ jet_engine()->listings->data->get_meta( 'field_key' );
 
 
 
-//======================
-//setup relational data jetenggine rest api
-//======================
+
+
+//====================================================
+// GET Nama Guru (Post Type Name) get_the_title()
+// Update : 11/09/2023
+//====================================================
 
 function dapetin_nilai_nama_guru() {
     $namaguru = get_the_title(); //ambil nama guru / title 
     return $namaguru;
 }
 add_shortcode('nama_guru','dapetin_nilai_nama_guru');
+
+
+
+
+//====================================================
+// REST API Relational data JETEnggine antar post type
+// Update : 11/09/2023
+//====================================================
 
 
 function dapetin_nama_kursus() {
@@ -131,10 +143,6 @@ add_shortcode('nama_kursus','dapetin_nama_kursus');
  ?>
 
 
-
-
-
- ?>
 
 
 
