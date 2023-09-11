@@ -90,6 +90,49 @@ jet_engine()->listings->data->get_meta( 'field_key' );
 
 
 
+//======================
+//setup relational data jetenggine rest api
+//======================
+
+function dapetin_nilai_nama_guru() {
+    $namaguru = get_the_title(); //ambil nama guru / title 
+    return $namaguru;
+}
+add_shortcode('nama_guru','dapetin_nilai_nama_guru');
+
+
+function dapetin_nama_kursus() {
+    $url_json = 'https://namadomain.com/wp-json/jet-rel/20'; //REST API relasional data 
+    $jsondata = file_get_contents($url_json);
+    //conversion to array
+    $array = json_decode($jsondata, true);
+    // var_dump($array);
+    // cek id saat ini yang tersedia di post
+    $post_type_id = get_the_id();
+    $sample_array = $array[$post_type_id];  
+    
+    if (empty($sample_array)) {
+        $data_kosong = 'Data Kursus Kosong';
+        return $data_kosong;
+    }
+    else {  
+        $dapatkan_judul = [];
+        foreach ($sample_array as $sample) {
+            $dapatkan_judul[] = get_the_title($sample['child_object_id']);
+        }
+        //var_dump ($dapatkan_judul); //debug array
+        $data_final_string = implode(', ',$dapatkan_judul); 
+    }
+    return $data_final_string;
+}
+add_shortcode('nama_kursus','dapetin_nama_kursus');
+
+
+ ?>
+
+
+
+
 
  ?>
 
