@@ -114,7 +114,7 @@ add_shortcode('nama_guru','dapetin_nilai_nama_guru');
 
 
 function dapetin_nama_kursus() {
-    $url_json = 'https://https://sinaou.id/wp-json/jet-rel/20'; //REST API relasional data 
+    $url_json = 'https://sinaou.id/wp-json/jet-rel/20'; //REST API relasional data 
     $jsondata = file_get_contents($url_json);
     //conversion to array
     $array = json_decode($jsondata, true);
