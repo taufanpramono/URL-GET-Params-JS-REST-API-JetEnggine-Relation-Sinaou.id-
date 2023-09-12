@@ -110,11 +110,12 @@ add_shortcode('nama_guru','dapetin_nilai_nama_guru');
 //====================================================
 // REST API Relational data JETEnggine antar post type
 // Update : 11/09/2023
+// Project Name : https://sinaou.id/
 //====================================================
 
 
 function dapetin_nama_kursus() {
-    $url_json = 'https://namadomain.com/wp-json/jet-rel/20'; //REST API relasional data 
+    $url_json = 'https://https://sinaou.id/wp-json/jet-rel/20'; //REST API relasional data 
     $jsondata = file_get_contents($url_json);
     //conversion to array
     $array = json_decode($jsondata, true);
@@ -140,7 +141,7 @@ function dapetin_nama_kursus() {
 add_shortcode('nama_kursus','dapetin_nama_kursus');
 
 
- ?>
+?>
 
 
 
